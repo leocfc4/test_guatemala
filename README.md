@@ -31,3 +31,5 @@ Para integracion de enpoints:
 4) Para obtener el detalle, se hace la peticion al metodo promocion de la API mediante la funcion loadDetalle() del servicio. Se envian como parametro el token en el header, y el id de item de listado. La funcion se invoca mediante un GET
 
 Se define una url base , de forma que en las funciones del serivicio se concatena la url base + el nombre del metodo de la API
+
+Nota importante: Para conectar la App con otro aplicacion de google (otro usuario), debe editar los datos de firebaseConfig que encuentra en la Configuración del proyecto en la consola firebase, y dichos datos colocarlos en los archivos environment.prod.ts yenvironment.ts en el directorio "scr/app/environment"
