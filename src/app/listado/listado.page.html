@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary shade">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Listado de productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of items2 " (click)="goDetalle(item.id)">
+    <ion-card-content>
+      <ion-row col-12>
+        <ion-col col-6>
+            <span><strong>Titulo:</strong></span><br>
+            <span>{{item.id}}</span>
+        </ion-col>
+        <ion-col col-3>
+            <span><strong>Precio:</strong></span><br>
+            <span>{{item.price}}</span>
+        </ion-col>
+        <ion-col col-3>
+            <span><strong>Fecha:</strong></span><br>
+            <span>{{item.updated_at}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-button routerLink="/home" routerDirection="back">Volver a home</ion-button> -->
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary shade">
+    <ion-title>
+      Test Guatemala
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-grid class="datos" >
+    <ion-row>
+      <ion-col size="12">
+      <!--   <div  class="text-danger">
+          sasasa
+        </div> -->
+        <ion-img class="picture" [src]="picture ? picture : 'assets/icon/user.png'"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text>
+          {{ name ? name : 'Nombre de usuario' }}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text>
+          {{ email ? email : 'Correo electrónico' }}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>                        
+
+  <div class="buttonsContainer">
+    <ion-button *ngIf="mostrar_login" expand="block" color="google" (click)="loginGoogle()">
+      <ion-icon name="logo-google"></ion-icon>
+      Iniciar Sesión con Google
+    </ion-button>
+    <ion-button *ngIf="mostrar_exit"  (click)="verListado()"> 
+        Ver Listado
+      </ion-button>
+    <div class="ion-margin-top"></div>
+    <ion-button *ngIf="mostrar_exit"  color="facebook" (click)="logout()">
+      Salir
+    </ion-button>
+  </div>
+</ion-content>

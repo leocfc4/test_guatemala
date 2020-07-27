@@ -1,0 +1,7 @@
+{
+  "name": "LoginGoogleAndFacebook",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
